@@ -1,3 +1,21 @@
 1. ctrl + shift + P
 2. Seleciona a pasta que quer inserir o projeto
 3. Inserir nome do projeto
+
+
+--- REGRAS DE NOMENCLATURA ---
+1. Palavras que formam nome de CLASSE, INTERFACE ou PROJETO devem ser justapostas, com iniciais maiúsculas e as demais letras minúsculas.
+    1. Exemplos: InputStreamReader
+2. Palavras que formam nome de um PACOTE (biblioteca) devem ser separadas por ponto e escritas totalmente em minúsculo
+    1. Exemplo: java.io
+3. Palavras que formam nome de VARIAVEL ou MÉTODO devem ser justapostas, com a primeira palavra totalmente minúscula e as subsequentes têm a inicial maiúscula
+    1. Exemplo: setMes
+4. Palavras que formam nome de uma CONSTANTE devem ser separadas por sublinhado (_) e escritas totalmente em maiúsculo
+    1. Exemplo: MAX_VALUE
+5.  A primeira palavra do nome de um MÉTODO que altera valores armazenados em um objeto deve ser “set” e o resto deve expressar o que é alterado.
+    1. Exemplo: setDia >> irá alterar o dia (SETTERs - métodos alteradores)
+6. A primeira palavra do nome de um MÉTODO que recupera um valor armazenado num objeto deve ser “get” e o resto deve expressar o que é recuperado.
+    
+    OBS: se o valor recuperado for boolean, em vez de “get”, deve ser utilizado “is”
+    
+    Exemplo: getDia >> irá trazer o dia que está armazenado na variável (GETTERs)
