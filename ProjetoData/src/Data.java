@@ -1,3 +1,5 @@
+import java.lang.Exception;
+import java.util.concurrent.ExecutionException;
 public class Data
 {
     private byte  dia, mes;
@@ -86,12 +88,12 @@ public class Data
     {
         if (Data.isValida((byte)(this.dia+1),this.mes,this.ano))
             this.dia++;
-        else if (Data.isValida((byte)1,(byte)(this.mes+1),this.ano)
+        else if (Data.isValida((byte)1,(byte)(this.mes+1),this.ano))
         {
             this.dia=1;
             this.mes++;
         }
-        else if (Data.isValida((byte)1,(byte)1,(short)(this.ano+1))
+        else if (Data.isValida((byte)1,(byte)1,(short)(this.ano+1)))
         {
             this.dia=(byte)1;
             this.mes=(byte)1;
@@ -109,27 +111,56 @@ public class Data
 
     public void retrocedaUmDia () // altera o this
     {
-        // faça
+        if (this.ano ==1 && this.mes == 1 && this.dia==1)
+        {
+            this.ano = -1;
+            this.mes = 12;
+            this.dia = 31;
+        }
+        else if (this.ano ==1582 && this.mes == 10 && this.dia == 15)
+            this.dia = (byte)4;
+        if(Data.isValida((byte)(this.dia-1),this.mes, this.ano))
+            this.dia--;
+        else if (this.mes-1 == 2)
+        {
+            if (isBissexto(this.ano))
+            {
+                this.dia = 29;
+                this.mes--;    
+            }
+            else // Não é bissexto
+            {
+                this.dia = 28;
+                this.mes--;
+            }
+        }
+        else if (Data.isValida((byte)31, (byte)(this.mes-1), this.ano))
+        {
+            this.dia = 31;
+            this.mes--;
+        }
+        else if (Data.isValida((byte)30, (byte)(this.mes-1), this.ano))
+        {
+            this.dia = 30;
+            this.mes--;
+        }
+        else if (Data.isValida((byte)31, (byte)12, (byte)(this.ano-1)))
+        {
+            this.dia = 31;
+            this.mes = 12;
+            this.ano--;
+        }
     }
 
-    public Data getDiaSeguinte () // não altera o this
+    public void retrocederVariosDias(int qnt) throws Exception
     {
-        // faça
+        if (qnt <= 0) throw new Exception ("Quantidade inválida!");
+        for (int i=0; i<qnt; i++) this.retrocedaUmDia();
     }
 
-    public Data getDiaAnterior () // não altera o this
+    public void variosDiasAdiante(int qnt) throws Exception
     {
-        // faça
-    }
+        if (qnt <= 0) throw new Exception("Quantidade inválida!");
+        for (int i = 0; i<qnt; i++) this.avanceUmDia();
+    } 
 }
-
-
-
-
-
-
-
-
-
-
-
