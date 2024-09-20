@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TesteDeAgenda",
+            "request": "launch",
+            "mainClass": "TesteDeAgenda",
+            "projectName": "conceitosJava_14a64133"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
