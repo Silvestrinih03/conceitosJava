@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Exercicios.Main",
+            "projectName": "conceitosJava_69ca4dd6"
+        },
+        {
+            "type": "java",
             "name": "TesteDeAgenda",
             "request": "launch",
             "mainClass": "TesteDeAgenda",
