@@ -1,4 +1,4 @@
-package Exercicios;
+package Pessoa;
 
 import java.util.Objects;
 
