@@ -33,7 +33,7 @@ public class ControladorDeLetrasJaDigitadas implements Cloneable {
     public String toString() {
         // retorna um String com TODAS as letras presentes em
         // this.letrasJaDigitadas separadas por vírgula (,).
-        String ret = "Letra já digitadas: ";
+        String ret = "";
 
         if (this.letrasJaDigitadas.length() > 0)
             ret += +this.letrasJaDigitadas.charAt(0);

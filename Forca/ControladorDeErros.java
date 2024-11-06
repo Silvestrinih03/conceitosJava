@@ -35,7 +35,7 @@ public class ControladorDeErros implements Cloneable {
     }
 
     public String toString() {
-        return "Erros: " + this.qtdErr + "/" + this.qtdMax;
+        return "" + this.qtdErr + "/" + this.qtdMax;
     }
 
     public boolean equals(Object obj) {
