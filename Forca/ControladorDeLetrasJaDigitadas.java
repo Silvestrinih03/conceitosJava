@@ -36,7 +36,7 @@ public class ControladorDeLetrasJaDigitadas implements Cloneable {
         String ret = "";
 
         if (this.letrasJaDigitadas.length() > 0)
-            ret += +this.letrasJaDigitadas.charAt(0);
+            ret += this.letrasJaDigitadas.charAt(0);
 
         for (int i = 1; i < this.letrasJaDigitadas.length(); i++) {
             ret += ", " + this.letrasJaDigitadas.charAt(i);
