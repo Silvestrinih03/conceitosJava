@@ -35,7 +35,21 @@ public class Palavra implements Comparable<Palavra> {
         // e assim por diante.
         // lançar excecao caso nao encontre em this.texto
         // a Iézima aparição da letra fornecida.
+        int ocorrenciasEncontradas = 0;
 
+        // Percorre o texto caractere por caractere
+        for (int j = 0; j < this.texto.length(); j++) {
+            if (this.texto.charAt(j) == letra) {
+                // Incrementa o contador de ocorrências
+                if (ocorrenciasEncontradas == i) {
+                    return j; // Retorna a posição da Iézima ocorrência
+                }
+                ocorrenciasEncontradas++;
+            }
+        }
+
+        // Se não encontrou a Iézima ocorrência, lança uma exceção
+        throw new Exception("A Iézima ocorrência da letra não foi encontrada.");
     }
 
     public int getTamanho() {
