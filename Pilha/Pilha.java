@@ -48,7 +48,7 @@ public class Pilha<X> implements Cloneable {
     @Override
     public String toString() {
         return "Pilha com " + (this.ultimo + 1) + " elementos" +
-                (this.ultimo == -1 ? "" : ",\nsendo o ultimo deles: " + this.elem[this.ultimo]);
+                (this.ultimo == -1 ? "" : ",\nsendo o ultimo deles: " + this.elemento[this.ultimo]);
     }
 
     @Override
